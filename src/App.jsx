@@ -255,10 +255,44 @@ const AccountPage = ({ onNavigate, subpage }) => {
 
     const renderContent = () => {
         switch(activeTab) {
-            case 'profile': return <div><h2 className="text-2xl font-bold mb-6">Personal Information</h2><form className="space-y-4 max-w-lg"><div className="flex gap-4"><input defaultValue="Rohan" className="w-full p-3 border rounded-lg"/><input defaultValue="Verma" className="w-full p-3 border rounded-lg"/></div><input defaultValue="rohan.verma@example.com" className="w-full p-3 border rounded-lg"/><button className="bg-[#1A1A1A] text-white font-bold py-3 px-6 rounded-lg">Save Changes</button></form></div>;
-            case 'addresses': return <div><h2 className="text-2xl font-bold mb-6">Saved Addresses</h2><div className="bg-gray-100 p-4 rounded-lg"><p className="font-semibold">Default Address</p><p>123, Ocean View, Panjim, Goa - 403001</p></div></div>;
-            case 'security': return <div><h2 className="text-2xl font-bold mb-6">Change Password</h2><form className="space-y-4 max-w-lg"><input type="password" placeholder="Current Password" className="w-full p-3 border rounded-lg"/><input type="password" placeholder="New Password" className="w-full p-3 border rounded-lg"/><input type="password" placeholder="Confirm New Password" className="w-full p-3 border rounded-lg"/><button className="bg-[#1A1A1A] text-white font-bold py-3 px-6 rounded-lg">Update Password</button></form></div>;
-            default: return null;
+            case 'profile': 
+                return (
+                    <div>
+                        <h2 className="text-2xl font-bold mb-6">Personal Information</h2>
+                        <form className="space-y-4 max-w-lg">
+                            <div className="flex gap-4">
+                                <input defaultValue="Rohan" className="w-full p-3 border rounded-lg"/>
+                                <input defaultValue="Verma" className="w-full p-3 border rounded-lg"/>
+                            </div>
+                            <input defaultValue="rohan.verma@example.com" className="w-full p-3 border rounded-lg"/>
+                            <button className="bg-[#1A1A1A] text-white font-bold py-3 px-6 rounded-lg">Save Changes</button>
+                        </form>
+                    </div>
+                );
+            case 'addresses': 
+                return (
+                    <div>
+                        <h2 className="text-2xl font-bold mb-6">Saved Addresses</h2>
+                        <div className="bg-gray-100 p-4 rounded-lg">
+                            <p className="font-semibold">Default Address</p>
+                            <p>123, Ocean View, Panjim, Goa - 403001</p>
+                        </div>
+                    </div>
+                );
+            case 'security': 
+                return (
+                    <div>
+                        <h2 className="text-2xl font-bold mb-6">Change Password</h2>
+                        <form className="space-y-4 max-w-lg">
+                            <input type="password" placeholder="Current Password" className="w-full p-3 border rounded-lg"/>
+                            <input type="password" placeholder="New Password" className="w-full p-3 border rounded-lg"/>
+                            <input type="password" placeholder="Confirm New Password" className="w-full p-3 border rounded-lg"/>
+                            <button className="bg-[#1A1A1A] text-white font-bold py-3 px-6 rounded-lg">Update Password</button>
+                        </form>
+                    </div>
+                );
+            default: 
+                return null;
         }
     };
 
@@ -284,6 +318,7 @@ const AccountPage = ({ onNavigate, subpage }) => {
         </div>
     );
 };
+
 
 
 // --- Core Layout Components ---
